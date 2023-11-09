@@ -1,0 +1,57 @@
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+ul li a {
+	color: white;
+	text-decoration: none;
+}
+
+main {
+	background-image: url("./assets/background.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+.social {
+	font-size: 24pt;
+	transition: ease-in-out 0.5s;
+	overflow: hidden;
+}
+.social:hover {
+	color: #de302f;
+}
+#download-button{
+	transition: ease-in-out 0.3s;
+}
+#download-button:hover{
+	background-color: #27302f;
+}
+.nav-li {
+	border: none;
+	background: none;
+}
+
+.hover-underline-animation {
+	position: relative;
+	padding-bottom: 5px;
+}
+
+.hover-underline-animation:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	transform-origin: bottom right;
+	transition: transform 0.25s ease-out;
+}
+.nav-li:hover .hover-underline-animation:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
