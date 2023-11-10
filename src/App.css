@@ -1,8 +1,11 @@
+*{
+	scroll-behavior: smooth;
+}
 nav {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 10;
+	z-index: 100;
 }
 ul li a {
 	color: white;
@@ -54,4 +57,26 @@ main {
 .nav-li:hover .hover-underline-animation:after {
 	transform: scaleX(1);
 	transform-origin: bottom left;
+}
+.skill-item{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 10px 0;
+	gap: 20px;
+}
+.skill-item li{
+	font-size: 24pt;
+	display: inline-block;
+}
+#projects{
+	position: absolute;
+	width: 100%;
+	top: 200px;
+	height: fit-content;
+	padding-top: 180px;
+	padding-bottom: 20px;
+	text-align: center;
+	overflow: hidden	;
 }

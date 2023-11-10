@@ -1,6 +1,5 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { Button } from "antd";
 import { FaSquareGithub, FaSquareInstagram, FaSquareBehance } from "react-icons/fa6";
 import picture from '../assets/picture.jpg'
 

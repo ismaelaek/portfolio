@@ -17,7 +17,7 @@ let Navbar = () => {
 
             const anchor = document.createElement('a');
             anchor.href = fileUrl;
-            anchor.setAttribute('download', 'IsmaelAekCV.pdf');
+            anchor.setAttribute('download', 'Ismaelaek CV.pdf');
             anchor.setAttribute('target', '_blank');
 
             document.body.appendChild(anchor);
@@ -36,10 +36,10 @@ let Navbar = () => {
             </a>
             <ul className='flex gap-10'>
                 <li className="nav-li">
-                    <a href="" className="hover-underline-animation" >About</a>
+                    <a href="#about" className="hover-underline-animation" >About</a>
                 </li>
                 <li className="nav-li">
-                    <a href="" className="hover-underline-animation" >Projects</a>
+                    <a href="#projects" className="hover-underline-animation" >Projects</a>
                 </li>
                 <li className="nav-li">
                     <a href="" className="hover-underline-animation" >Contact</a>
