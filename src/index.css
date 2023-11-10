@@ -19,6 +19,9 @@ body {
 	scroll-behavior: smooth;
 	background-color: #27302f ;
 }
+body::-webkit-scrollbar {
+	display: none;
+}
 h1 {
 	font-family: "League Spartan";
 }

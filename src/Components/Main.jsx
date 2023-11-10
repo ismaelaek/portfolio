@@ -12,7 +12,7 @@ let Main = () => {
     return (
         <main className=" px-24 flex items-center justify-between">
             <div >
-                <p className="text-2x1 text-white">Hi there ! it's Ismael,</p>
+                <p className="text-2x1 text-white">Hi there ! it's Ismail,</p>
                 <h1 className=" text-6xl text-white">
                     I am a <span className=" text-red-500">{text}</span><Cursor />
                 </h1>
