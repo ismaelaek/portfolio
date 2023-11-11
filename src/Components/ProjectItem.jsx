@@ -1,14 +1,22 @@
-let ProjectItem = ({image, title, description}) => {
+let ProjectItem = ({icons, title, description, link, caption}) => {
     return (
-        <div>
-            <div className="project-image">
-                <img src={image} alt={title}  />
+            <div className="project-card">
+                <p className='project-icons'>
+                    {icons.map((icon) => {
+                        return (icon)
+                    })}
+                </p>
+                <div className="project-info">
+                    <p className="text head">{title}</p>
+                    <span>{description}</span>
+                    <button
+                        className="text link">
+                        <a href={link !=='' ? link : '#'}>
+                            {caption}
+                            </a>
+                    </button>
+                </div>
             </div>
-            <div className="description">
-                <h2>{title}</h2>
-                <p>{description}</p>
-            </div>
-        </div>
     )
 }
 
