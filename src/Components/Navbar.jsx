@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button , Drawer, Space } from "antd";
+import { Button , Drawer, Space , message} from "antd";
 import { LoadingOutlined } from '@ant-design/icons';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaDownload } from "react-icons/fa6";
@@ -25,7 +25,7 @@ let Navbar = () => {
             anchor.click();
             document.body.removeChild(anchor);
         } catch (error) {
-            console.error('Failed to download PDF:', error);
+            message.error('Failed to download PDF');
         } finally {
             setLoading(false);
         }
@@ -49,7 +49,6 @@ let Navbar = () => {
                     type="primary"
                     shape="round"
                     icon={loading ? <LoadingOutlined/> : <FaDownload/>}
-                    className=" text-gray-800 bg-white hover:text-white cursor-pointer"
                     id="download-button"
                     onClick={handleDownload}
                 >

@@ -2,7 +2,7 @@ import { SiJavascript, SiPython, SiReact, SiMongodb, SiAdobephotoshop, SiFigma, 
 import {SiPostman, SiGit, SiAdobeillustrator, SiJira, SiTailwindcss} from "react-icons/si";
 let About = () => {
     return (
-        <div id="about" className=" p-5 mx-10 rounded-xl bg-white text-center shadow-md" style={{ position: "absolute", top: 0, left: 0, zIndex: 10 , width: 'auto'}}>
+        <div id="about" className=" p-5 mx-10 rounded-xl bg-white text-center shadow-md" style={{ position: "absolute", top: -100, left: 0, zIndex: 10 , width: 'auto'}}>
             <h1 className=" text-3xl">Hi, I'm Ismail Ait El Kamel, nice to meet you !!</h1>
             <p className=" text-center text-lg ">
                 A highly motivated and ambitious student at ISTA 
