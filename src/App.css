@@ -190,16 +190,21 @@ main {
 	padding: 20px 0;
 	border: #27302f solid 2px;
 	width: 100%;
+	background-image: url("./assets/contactBG.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	display: flex;
+	justify-content: space-around;
 }
 .container {
-	width: 350px;
-	height: 400px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	max-width: 200px;
+	width: auto;
+	height: fit-content;
+	padding: 20px 40px ;
 	position: relative;
 	border-radius: 3px;
-	background: #27302f;
+	backdrop-filter: blur(10px);
 }
 
 .container form .descr {
@@ -262,10 +267,7 @@ textarea {
 	background: transparent;
 }
 
-.inputGroup:is(input:focus, input:valid) {
-	border-color: rgb(37, 37, 211);
-}
-.form button {
+.form .send-Button {
 	color: #e8e8e8;
 	font-size: 15px;
 	align-self: flex-start;
@@ -279,7 +281,7 @@ textarea {
 	overflow: hidden;
 }
 
-.form button:before {
+.form .send-Button:before {
 	content: "";
 	position: absolute;
 	bottom: 100%;
@@ -291,11 +293,11 @@ textarea {
 	transition: opacity 0.3s ease-in-out;
 }
 
-.form button:hover:before {
+.form .send-Button:hover:before {
 	opacity: 0.2;
 }
 
-.form button:hover {
+.form .send-Button:hover {
 	transform: translateY(-3px);
 	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
