@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { message } from "antd";
 let Contact = () => {
@@ -16,15 +16,10 @@ let Contact = () => {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setInfo({
-        ...info,
-        [name]: value,
-        });
+        setInfo({...info,[name]: value});
     };
     const sendEmail = (e) => {
         e.preventDefault();
-
-        // Validate Name and Message
         const errors = {
         user_name: info.user_name.trim() === '',
         user_email: !(emailRegex.test(info.user_email.trim())),
@@ -39,7 +34,7 @@ let Contact = () => {
             user_email: false,
             message: false,
         });
-
+        
         emailjs.sendForm(
             "service_peoyqai",
             "template_5b91txh",
@@ -59,26 +54,33 @@ let Contact = () => {
         }
     };
     return (
-        <div className="contact">
-            <div className="container">
+        <div className="contact" id="contact">
+            <div className="form-container">
                 <form ref={form} className="form" onSubmit={sendEmail}>
-                <div className="descr">Contact Me</div>
+                <h1 className="text-4xl text-white mb-3  text-center">Contact Me</h1>
                 <div className="input">
-                    <input 
-                    required="" type="text" name="user_name" onChange={handleChange}  style={{borderColor : !info.user_name ? 'red' : ''}} />
-                    {/* <label htmlFor="name">Name</label> */}
+                    <input type="text" name="user_name" onChange={handleChange} autoComplete={false} />
+                    <label htmlFor="name">Name</label>
                 </div>
 
                 <div className="input">
-                    <input required="" name="user_email" type="text" onChange={handleChange}  style={{borderColor : !info.user_email ? 'red' : ''}}/>
-                    {/* <label htmlFor="email">E-mail</label> */}
+                    <input  type="text" name="user_email" onChange={handleChange} autoComplete={false} />
+                    <label htmlFor="email">E-mail</label>
                 </div>
 
                 <div className="input">
-                    <textarea required="" cols="30" rows="1" name="message" id="message" onChange={handleChange} style={{borderColor : !info.message ? 'red' : ''}} ></textarea>
-                    {/* <label htmlFor="message">Message</label> */}
+                    <textarea
+                            className="text-white mt-4"
+                            cols="30" rows="1"
+                            name="message"
+                            id="message"
+                            onChange={handleChange}
+                            autoComplete={false}
+                        >
+                        </textarea>
+                    <label htmlFor="message">Message</label>
                 </div>
-                <input type='submit' value='Send message →' className="send-Button"/>
+                <input type='submit' value='Send message →' className="send-Button mt-4 self-center"/>
                 </form>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import ProjectItem from './ProjectItem';
-import { SiPython, SiTypescript, SiJavascript, SiReact } from 'react-icons/si';
+import { SiPython, SiTypescript, SiJavascript, SiReact, SiRedux } from 'react-icons/si';
 
 let Projects = () => {
     return (
@@ -7,15 +7,15 @@ let Projects = () => {
             <h1 className=" text-4xl text-gray-800 mb-3">Projects</h1>
             <div className="projects-content">
                 <ProjectItem 
-                    title={'Project Manager'}
-                    description={`a project manager app implemented in React.js and Javascript.`}
-                    icons={[<SiReact />, <SiJavascript/>]}
-                    link={'https://github.com/ismaelaek/react-project-manager'}
+                    title={'Todo app'}
+                    description={`A todo list app made using reactJS, with authentifacton option to allow each user to manage his own list`}
+                    icons={[<SiReact />, <SiJavascript/>, <SiRedux/>]}
+                    link={'https://github.com/ismaelaek/todo_app_reactjs_redux'}
                     caption ='View on GitHub'
                 />
                 <ProjectItem 
                     title={'Pdf Editor'}
-                    description={`An online pdf editor application made using ReactJs, TypeScript and Python.`}
+                    description={`An online pdf editor application made with ReactJs, TypeScript and Python.`}
                     icons={[<SiReact />, <SiTypescript/>, <SiPython/>]}
                     link={''}
                     caption ='Still under development'
@@ -24,7 +24,7 @@ let Projects = () => {
                     title={'Movie Recommendation '}
                     description={`A Python-based Telegram bot for movie recommendations.`}
                     icons={[ <SiPython/>]}
-                    link={'https://github.com/ismaelaek/react-project-manager'}
+                    link={'https://github.com/ismaelaek/movie_recommendation_bot'}
                     caption ='View on GitHub'
                 />
                 <ProjectItem 
