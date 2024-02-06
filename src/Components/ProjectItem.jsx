@@ -1,11 +1,9 @@
 let ProjectItem = ({icons, title, description, link, caption}) => {
     return (
             <div className="project-card">
-                <p className='project-icons'>
-                    {icons.map((icon) => {
-                        return (icon)
-                    })}
-                </p>
+                {icons.map((icon, index) => {
+                    return (<p className='project-icons' key={index}> {icon}</p>)
+                })}
                 <div className="project-info">
                     <p className="text head">{title}</p>
                     <span>{description}</span>
@@ -13,7 +11,7 @@ let ProjectItem = ({icons, title, description, link, caption}) => {
                         className="text link">
                         <a href={link !=='' ? link : '#'}>
                             {caption}
-                            </a>
+                        </a>
                     </button>
                 </div>
             </div>

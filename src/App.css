@@ -230,7 +230,6 @@ textarea {
 	width: 100%;
 	resize: none;
 }
-
 label {
 	font-size: 100%;
 	position: absolute;
@@ -244,7 +243,10 @@ label {
 }
 
 input:focus ~ label,
-textarea:focus~label{
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label
+{
 	transform: translateY(-50%) scale(.8);
 	margin: 0em;
 	margin-bottom: 10px;
